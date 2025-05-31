@@ -21,7 +21,7 @@ function getNearestCharacter()
     local shortestDistance = math.huge
 
     for _, Character in workspace:GetDescendants() do
-        if Character ~= LocalCharacter then
+        if Character:IsA("Model") and Character ~= LocalCharacter then
             local RootPart = Character:FindFirstChild("HumanoidRootPart")
 
             if RootPart then
